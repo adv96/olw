@@ -18,9 +18,9 @@ class Client extends Model
         'user_id'
     ];
 
-    public function address(): HasOne
+    public function address(): belongsTo
     {
-        return $this->hasOne(Address::class);
+        return $this->belongsTo(Address::class);
     }
 
     public function user(): BelongsTo
